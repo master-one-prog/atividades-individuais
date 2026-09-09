@@ -22,3 +22,14 @@ class Cartao_de_Credito(Meio_de_pagamento):
         super().__init__(status)
 
         self.numero_cartao = numero_cartao
+
+    def processar_pagamento(self):
+        self.status = 'Aprovado'
+        print("Pagamento Processado!")
+
+    def cancelar_pagamento(self):
+        self.status = 'cancelado'
+        print("Pagamento cancelado!")
+    
+    def gerar_comprovante(self):
+        
